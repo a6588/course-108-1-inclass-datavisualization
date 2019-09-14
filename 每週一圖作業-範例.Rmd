@@ -13,7 +13,10 @@ params:
 library(dplyr); library(stringr); library(ggplot2); library(plotly); library(lubridate); library(readr);
 library(tidyr); library(showtext)
 
-font_add("QYuan","cwTeXQYuan-Medium.ttf") # 新增字體
+
+font_add(family="yuan",regular="/USERS/SYL/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/cwTeXQYuan-Medium.ttf")
+
+#font_add("QYuan","cwTeXQYuan-Medium.ttf") # 新增字體
 showtext_auto(enable=TRUE) #啟用字體
 theme_set(theme_classic())
 knitr::opts_chunk$set(out.width='80%', fig.asp=.75, fig.align='center', fig.showtext=T)
@@ -35,6 +38,12 @@ knitr::opts_chunk$set(out.width='80%', fig.asp=.75, fig.align='center', fig.show
 
   * 資料處理  
   * 作圖用資料物件生成
+  
+  
+```{R}
+load("example_data.Rda")
+
+```
   
 ```{r data cleaning, echo=TRUE, eval=T}
 # 資料引入
